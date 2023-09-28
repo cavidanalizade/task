@@ -1,21 +1,17 @@
-﻿Console.Write("Bir tam sayı girin: ");
-int n = int.Parse(Console.ReadLine());
-
-bool powerTwo = false;
-if (n>0)
+﻿int n = int.Parse(Console.ReadLine());
+int count = 0;
+for (int i = 1; i <= n/2; i++)
 {
-    if ((n&(n-1))==0)
+    if (n % i == 0)
     {
-        powerTwo = true;
+        count++;
     }
 }
-if (powerTwo)
+if (count == 1)
 {
-    Console.WriteLine("2 nin quvvetidir");
+    Console.WriteLine( "sade ededdir");
 }
 else
 {
-    Console.WriteLine("2 nin quvveti deyil");
+    Console.WriteLine("Murekkeb ededdir");
 }
-
-
